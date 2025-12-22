@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Packaging / metadata
+*.egg-info/
+dist/
+build/
+
+# Logs / runtime
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Uploaded or generated assets (uncomment if you don't want to track)
+# uploads/
+# Data/
+
