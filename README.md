@@ -115,7 +115,7 @@ beautifulsoup4>=4.12.0
 # Web and API
 requests>=2.31.0
 tavily-python>=0.3.0
-speech-recognition>=3.10.0
+SpeechRecognition>=3.10.0
 
 # Image Processing
 Pillow>=10.0.0

@@ -26,10 +26,9 @@ def index():
 def chat():
     text_input = request.form.get("message", "").strip()
     image_file = request.files.get("image")
-    
+
     final_query = ""
 
-    # If image is provided
     if image_file:
         filename = secure_filename(image_file.filename)
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -41,8 +40,7 @@ def chat():
             final_query = image_result["description"]
         else:
             return jsonify({"reply": f"Image processing error: {image_result['error']}"})
-    
-    # If text is provided (use either or both)
+
     if text_input:
         final_query = f"{text_input}. " + final_query if final_query else text_input
 
@@ -57,4 +55,5 @@ def chat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)

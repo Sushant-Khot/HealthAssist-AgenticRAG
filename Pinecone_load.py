@@ -20,7 +20,7 @@ def load_pdf_file(data):
 
 extracted_data=load_pdf_file(data='Data/')
 
-# print(extracted_data)
+print(extracted_data)
 
 #text splitting into chunks
 def text_split(extracted_data):
@@ -29,8 +29,8 @@ def text_split(extracted_data):
     return text_chunks
 
 text_chunks=text_split(extracted_data)
-# print("length of the chunk is ",len(text_chunks))
-# print(text_chunks)
+print("length of the chunk is ",len(text_chunks))
+print(text_chunks)
 
 #embedding models to convert to embeddings from the huggingface note the dimension of the vector model need in pinnecone
 #384 dimension vector
